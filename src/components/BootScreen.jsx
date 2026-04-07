@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const bootLines = [
-    "DeskMachine OS v1.0\n\nCopyright (C) DeskMachine Corp. 1998-2026\nAll rights reserved.\n_________________________________________________________________________",
+    "DeskMachine OS v1.0\n\nCopyright (C) DeskMachine Corp. 1995-2026\nAll rights reserved.\n_________________________________________________________________________",
     "Initializing system...............OK",
     "Loading core modules..............OK\n\n[██████░░░░░░░░░░] 32%",
     "Checking hardware.................OK",
