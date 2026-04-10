@@ -1,3 +1,5 @@
+import "./DesktopShortcut.css";
+
 export default function DesktopShortcut({ icon, label, onClick }) {
   return (
     <button className="desktop-shortcut" onClick={onClick}>

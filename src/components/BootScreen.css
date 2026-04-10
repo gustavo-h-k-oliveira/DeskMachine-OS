@@ -1,0 +1,36 @@
+.boot-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    color: #39ff14;
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 9999;
+}
+
+.boot-screen__content {
+    max-width: 720px;
+    user-select: none;
+}
+
+.boot-screen__content p {
+    margin: 0 0 0.75rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    font-size: 1rem;
+}
+
+.boot-screen__cursor {
+    display: inline-block;
+    width: 0.7rem;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}

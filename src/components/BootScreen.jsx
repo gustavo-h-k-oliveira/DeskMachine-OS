@@ -1,3 +1,4 @@
+import "./BootScreen.css";
 import { useEffect, useState } from "react";
 
 const bootLines = [
@@ -5,7 +6,7 @@ const bootLines = [
     "Initializing system...............OK",
     "Loading core modules..............OK\n\n[██████░░░░░░░░░░] 32%",
     "Checking hardware.................OK",
-    "Initializing kernel.............. OK\n\n[████████████░░░░] 68%",
+    "Initializing kernel...............OK\n\n[████████████░░░░] 68%",
     "Starting interface services.......OK",
     "Launching user environment........OK\n\n[████████████████] 100%\n_________________________________________________________________________",
     "Welcome, Gustavo. ❤"

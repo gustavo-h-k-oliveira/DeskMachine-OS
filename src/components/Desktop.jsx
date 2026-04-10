@@ -1,3 +1,5 @@
+import "./Desktop.css";
+
 import DesktopShortcut from './DesktopShortcut';
 import Computer from '../assets/icons/computer.png';
 import Directory from '../assets/icons/directory.png';
@@ -7,6 +9,7 @@ import Trash from '../assets/icons/recycle_bin.png';
 import Terminal from '../assets/icons/terminal.png';
 import Browser from '../assets/icons/internet.png';
 import Script from '../assets/icons/script.png';
+import Taskbar from "./Taskbar";
 
 export default function Desktop() {
   return (
@@ -49,7 +52,7 @@ export default function Desktop() {
         />
         <DesktopShortcut
           icon={Script}
-          label="Habilidades"
+          label="Habilidades.bat"
           onClick={() => alert('Abrindo Habilidades...')}
         />
         <DesktopShortcut
@@ -63,6 +66,7 @@ export default function Desktop() {
           onClick={() => alert('Abrindo Lixeira...')}
         />
       </div>
+      <Taskbar />
     </div>
   );
 }
