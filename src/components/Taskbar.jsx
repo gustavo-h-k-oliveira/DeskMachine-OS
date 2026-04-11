@@ -18,6 +18,13 @@ export default function Taskbar() {
 
     return (
         <div className="taskbar">
+            <button className="main-button">
+                <strong>Start</strong>
+            </button>
+            <div className='separator'></div>
+            <div className="taskbar-apps">
+                {/* Aplicativos abertos aqui */}
+            </div>
             <div className="status-bar">
                 <img src={Check} alt="Check" className="status-icon" />
                 <img src={Network} alt="Network" className="status-icon" />
