@@ -1,5 +1,4 @@
 .app-window {
-    z-index: 10;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -29,14 +28,25 @@
     padding-left: 0.3rem;
 }
 
-.app-window__close {
+.app-window__buttons {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.app-window__buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #d0d0d0;
     border-color: #fff #000 #000 #fff;
     background: #c6c6c6;
     color: black;
     font-size: 1rem;
-    padding: 0 0.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
+    line-height: 0.5rem;
 }
 
 .app-window__content {

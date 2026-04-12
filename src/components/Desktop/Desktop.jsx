@@ -73,7 +73,7 @@ export default function Desktop() {
         />
       </div>
 
-      {windows.map((window) => (
+      {windows.filter((window) => !window.minimized).map((window) => (
         <AppWindow key={window.id} window={window} />
       ))}
 

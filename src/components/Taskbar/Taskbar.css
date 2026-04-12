@@ -43,6 +43,27 @@
     gap: 0.3rem;
 }
 
+.taskbar-button {
+    border: 1px solid #fff;
+    border-color: #fff #808080 #808080 #fff;
+    background-color: #c0c0c0;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.taskbar-button:active {
+    border-color: #808080 #fff #fff #808080;
+}
+
+.taskbar-button.active {
+    background-color: #aaa;
+    font-weight: bold;
+    border-color: #666 #fff #fff #666;
+}
+
 .status-bar {
     display: flex;
     flex-direction: row;
