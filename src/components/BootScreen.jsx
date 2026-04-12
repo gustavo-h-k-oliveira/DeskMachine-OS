@@ -2,13 +2,13 @@ import "./BootScreen.css";
 import { useEffect, useState } from "react";
 
 const bootLines = [
-    "DeskMachine OS v1.0\n\nCopyright (C) DeskMachine Corp. 1995-2026\nAll rights reserved.\n_________________________________________________________________________",
+    "DeskMachine OS v1.0\n\nCopyright (C) DeskMachine Corp. 1995-2026\nAll rights reserved.\n_________________________________________",
     "Initializing system...............OK",
     "Loading core modules..............OK\n\n[██████░░░░░░░░░░] 32%",
     "Checking hardware.................OK",
     "Initializing kernel...............OK\n\n[████████████░░░░] 68%",
     "Starting interface services.......OK",
-    "Launching user environment........OK\n\n[████████████████] 100%\n_________________________________________________________________________",
+    "Launching user environment........OK\n\n[████████████████] 100%\n_________________________________________",
     "Welcome, Gustavo. ❤"
 ];
 

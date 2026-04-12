@@ -34,3 +34,32 @@
         visibility: hidden;
     }
 }
+
+@media (max-width: 640px) {
+    .boot-screen {
+        padding: 1rem;
+    }
+
+    .boot-screen__content {
+        max-width: 100%;
+    }
+
+    .boot-screen__content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .boot-screen__cursor {
+        width: 0.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .boot-screen {
+        padding: 0.75rem;
+    }
+
+    .boot-screen__content p {
+        font-size: 0.85rem;
+    }
+}
