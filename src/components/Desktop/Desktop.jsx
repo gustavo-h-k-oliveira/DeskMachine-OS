@@ -1,17 +1,23 @@
 import "./Desktop.css";
 
 import DesktopShortcut from './DesktopShortcut';
-import Computer from '../assets/icons/computer.png';
-import Directory from '../assets/icons/directory.png';
-import WebPage from '../assets/icons/html.png';
-import Notepad from '../assets/icons/notepad.png';
-import Trash from '../assets/icons/recycle_bin.png';
-import Terminal from '../assets/icons/terminal.png';
-import Browser from '../assets/icons/internet.png';
-import Script from '../assets/icons/script.png';
-import Taskbar from "./Taskbar";
+import AppWindow from '../Window/AppWindow';
+import { useWindowStore } from '../../store/windowStore';
+import SobreMim from '../apps/SobreMim';
+import Computer from '../../assets/icons/computer.png';
+import Directory from '../../assets/icons/directory.png';
+import WebPage from '../../assets/icons/html.png';
+import Notepad from '../../assets/icons/notepad.png';
+import Trash from '../../assets/icons/recycle_bin.png';
+import Terminal from '../../assets/icons/terminal.png';
+import Browser from '../../assets/icons/internet.png';
+import Script from '../../assets/icons/script.png';
+import Taskbar from "../Taskbar/Taskbar";
 
 export default function Desktop() {
+  const openWindow = useWindowStore((state) => state.openWindow);
+  const windows = useWindowStore((state) => state.windows);
+
   return (
     <div className="app">
       <div className='desktop'>
@@ -28,7 +34,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Notepad}
           label="SobreMim.txt"
-          onClick={() => alert('Abrindo Sobre Mim...')}
+          onClick={() => openWindow({ id: 'sobre', title: 'SobreMim.txt — Notepad', component: SobreMim })}
         />
         <DesktopShortcut
           icon={WebPage}
@@ -66,6 +72,11 @@ export default function Desktop() {
           onClick={() => alert('Abrindo Lixeira...')}
         />
       </div>
+
+      {windows.map((window) => (
+        <AppWindow key={window.id} window={window} />
+      ))}
+
       <Taskbar />
     </div>
   );

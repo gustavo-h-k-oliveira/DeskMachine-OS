@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import "./Taskbar.css";
 
-import Network from '../assets/icons/network_pcs.png';
-import Speaker from '../assets/icons/loudspeaker.png';
-import Check from '../assets/icons/check.png';
+import Network from '../../assets/icons/network_pcs.png';
+import Speaker from '../../assets/icons/loudspeaker.png';
+import Check from '../../assets/icons/check.png';
 
 export default function Taskbar() {
     const [time, setTime] = useState(() => new Date());
