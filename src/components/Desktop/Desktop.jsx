@@ -3,7 +3,7 @@ import "./Desktop.css";
 import DesktopShortcut from './DesktopShortcut';
 import AppWindow from '../Window/AppWindow';
 import { useWindowStore } from '../../store/windowStore';
-import SobreMim from '../apps/SobreMim';
+import SobreMim from '../apps/SobreMim/SobreMim';
 import Computer from '../../assets/icons/computer.png';
 import Directory from '../../assets/icons/directory.png';
 import WebPage from '../../assets/icons/html.png';
