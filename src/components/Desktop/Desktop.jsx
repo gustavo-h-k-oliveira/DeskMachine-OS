@@ -14,6 +14,7 @@ import Terminal from '../../assets/icons/terminal.png';
 import Browser from '../../assets/icons/internet.png';
 import Script from '../../assets/icons/script.png';
 import Taskbar from "../Taskbar/Taskbar";
+import startupSound from '/src/assets/sounds/startup-sound.mp3';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -39,6 +40,23 @@ export default function Desktop() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const audio = new Audio(startupSound);
+    let isCancelled = false;
+
+    audio.play().catch((err) => {
+      if (err.name !== 'AbortError') {
+        console.warn('Erro de áudio:', err);
+      }
+    });
+
+    return () => {
+      isCancelled = true;
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [startupSound]);
 
   return (
     <div className="app">
