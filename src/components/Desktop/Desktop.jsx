@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import "./Desktop.css";
 
 import DesktopShortcut from './DesktopShortcut';
@@ -14,12 +15,42 @@ import Browser from '../../assets/icons/internet.png';
 import Script from '../../assets/icons/script.png';
 import Taskbar from "../Taskbar/Taskbar";
 
+const backgrounds = Object.values(
+  import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  })
+);
+
 export default function Desktop() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const openWindow = useWindowStore((state) => state.openWindow);
   const windows = useWindowStore((state) => state.windows);
 
+  useEffect(() => {
+    if (backgrounds.length === 0) {
+      return undefined;
+    }
+
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % backgrounds.length);
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="app">
+      <div className="backgrounds">
+        {backgrounds.map((image, index) => (
+          <div
+            key={image}
+            className={`background ${index === activeIndex ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${image})` }}
+          />
+        ))}
+      </div>
       <div className='desktop'>
         <DesktopShortcut
           icon={Computer}
