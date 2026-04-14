@@ -1,10 +1,12 @@
 .app-window {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
 }
 
 .app-window__frame {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     padding: 0.1rem;
