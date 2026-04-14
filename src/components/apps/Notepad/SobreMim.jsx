@@ -1,4 +1,4 @@
-import "./SobreMim.css";
+import "./Notepad.css";
 
 export default function SobreMim() {
   return (

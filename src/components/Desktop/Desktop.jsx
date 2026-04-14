@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import "./Desktop.css";
 
+import startupSound from '/src/assets/sounds/startup-sound.mp3';
 import DesktopShortcut from './DesktopShortcut';
 import AppWindow from '../Window/AppWindow';
 import { useWindowStore } from '../../store/windowStore';
-import SobreMim from '../apps/SobreMim/SobreMim';
+
 import Computer from '../../assets/icons/computer.png';
 import Directory from '../../assets/icons/directory.png';
 import WebPage from '../../assets/icons/html.png';
@@ -13,8 +14,11 @@ import Trash from '../../assets/icons/recycle_bin.png';
 import Terminal from '../../assets/icons/terminal.png';
 import Browser from '../../assets/icons/internet.png';
 import Script from '../../assets/icons/script.png';
+
 import Taskbar from "../Taskbar/Taskbar";
-import startupSound from '/src/assets/sounds/startup-sound.mp3';
+
+import SobreMim from '../apps/Notepad/SobreMim';
+import Educacao from '../apps/Notepad/Educacao';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -110,7 +114,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Notepad}
           label="Educação.txt"
-          onClick={() => alert('Abrindo Educação...')}
+          onClick={() => openWindow({ id: 'educacao', title: 'Educação.txt — Notepad', component: Educacao })}
         />
         <DesktopShortcut
           icon={WebPage}
