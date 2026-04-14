@@ -24,6 +24,11 @@ const backgrounds = Object.values(
   })
 );
 
+backgrounds.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
+
 export default function Desktop() {
   const [activeIndex, setActiveIndex] = useState(0);
   const openWindow = useWindowStore((state) => state.openWindow);
@@ -39,6 +44,13 @@ export default function Desktop() {
     }, 30000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    backgrounds.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
 
   useEffect(() => {

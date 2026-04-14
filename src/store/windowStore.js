@@ -6,29 +6,28 @@ const getTaskbarHeight = () => {
     return taskbar?.offsetHeight ?? 0;
 };
 
+const getSmallScreenSize = () => {
+    if (typeof window === 'undefined' || window.innerWidth >= 500) return null;
+    return {
+        x: 0,
+        y: 0,
+        width: window.innerWidth,
+        height: window.innerHeight - getTaskbarHeight(),
+    };
+};
+
 export const useWindowStore = create((set) => ({
     windows: [],
     nextWindowId: 1,
     nextZIndex: 1,
 
     openWindow: (app) => {
-        const isSmallScreen =
-            typeof window !== 'undefined' && window.innerWidth < 500;
-
-        const taskbarHeight = getTaskbarHeight();
-
-        const defaultSize = isSmallScreen
-            ? {
-                x: 0,
-                y: 0,
-                width: window.innerWidth,
-                height: window.innerHeight - taskbarHeight,
-            } : {
-                x: 80,
-                y: 80,
-                width: 420,
-                height: 320,
-            };
+        const defaultSize = getSmallScreenSize() ?? {
+            x: 80,
+            y: 80,
+            width: 420,
+            height: 320,
+        };
 
         return set((state) => ({
             windows: [
@@ -58,12 +57,23 @@ export const useWindowStore = create((set) => ({
         )
     })),
 
-    restoreWindow: (id) => set((state) => ({
-        windows: state.windows.map((w) =>
-            w.id === id ? { ...w, minimized: false, zIndex: state.nextZIndex } : w
-        ),
-        nextZIndex: state.nextZIndex + 1,
-    })),
+    restoreWindow: (id) => set((state) => {
+        const smallScreenSize = getSmallScreenSize();
+
+        return {
+            windows: state.windows.map((w) =>
+                w.id === id
+                    ? {
+                        ...w,
+                        minimized: false,
+                        zIndex: state.nextZIndex,
+                        ...(smallScreenSize ?? {}),
+                    }
+                    : w
+            ),
+            nextZIndex: state.nextZIndex + 1,
+        };
+    }),
 
     focusWindow: (id) => set((state) => ({
         windows: state.windows.map((w) =>
@@ -87,7 +97,7 @@ export const useWindowStore = create((set) => ({
                     width: window.innerWidth,
                     height: window.innerHeight - getTaskbarHeight(),
                 }
-            : w
-        )
+                : w
+        ),
     }))
 }));
