@@ -37,18 +37,29 @@
 
 .app-window__buttons button {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
     border: 2px solid #d0d0d0;
     border-color: #fff #000 #000 #fff;
     background: #c6c6c6;
     color: black;
-    font-size: 1rem;
     width: 1.2rem;
     height: 1.2rem;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    line-height: 0.5rem;
+}
+
+.app-window__minimize {
+    align-items: baseline;
+    font-size: 1rem;
+}
+
+.app-window__maximize {
+    font-size: 0.7rem;
+    align-items: center;
+}
+
+.app-window__close {
+    align-items: center;
 }
 
 .app-window__content {

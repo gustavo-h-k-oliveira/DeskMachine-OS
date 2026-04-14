@@ -7,6 +7,7 @@ export default function AppWindow({ window }) {
   const closeWindow = useWindowStore((state) => state.closeWindow);
   const focusWindow = useWindowStore((state) => state.focusWindow);
   const minimizeWindow = useWindowStore((state) => state.minimizeWindow);
+  const maximizeWindow = useWindowStore((state) => state.maximizeWindow);
 
   const AppContent = window.component;
 
@@ -34,6 +35,9 @@ export default function AppWindow({ window }) {
           <div className="app-window__buttons">
             <button className="app-window__minimize" onClick={() => minimizeWindow(window.id)}>
               -
+            </button>
+            <button className="app-window__maximize" onClick={() => maximizeWindow(window.id)}>
+              ▢
             </button>
             <button className="app-window__close" onClick={() => closeWindow(window.id)}>
               ×

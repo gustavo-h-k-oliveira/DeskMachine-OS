@@ -14,14 +14,14 @@ export default function Educacao() {
           Educação
         </h1>
         <h2>
-            <strong>ETEC Presidente Vargas, 2019 - 2021</strong>
+          ETEC Presidente Vargas, 2019 - 2021
         </h2>
         <p>
             Ensino médio integrado ao curso técnico de eletrônica.
         </p>
         <br />
         <h2>
-            <strong>FATEC Pompeia, 2022 - 2026</strong>
+          FATEC Pompeia, 2022 - 2026
         </h2>
         <p>
             Big Data no Agronegócio.
