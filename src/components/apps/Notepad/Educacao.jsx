@@ -1,14 +1,10 @@
 import "./Notepad.css";
+import Menu from "./Menu/Menu";
 
 export default function Educacao() {
   return (
     <div className="frame">
-      <div className="menu">
-        <p>File</p>
-        <p>Edit</p>
-        <p>Search</p>
-        <p>Help</p>
-      </div>
+      <Menu />
       <div className="content">
         <h1>
           Educação

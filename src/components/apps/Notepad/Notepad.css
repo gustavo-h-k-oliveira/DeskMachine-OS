@@ -2,22 +2,6 @@
     background: #fff;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.9rem;
-    color: #222;
-    background: #c6c6c6;
-}
-
-.menu p {
-    margin: 0;
-    cursor: pointer;
-}
-
 .content {
     padding: 0.5rem;
     color: #111;
