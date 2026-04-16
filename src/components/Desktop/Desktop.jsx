@@ -6,19 +6,20 @@ import DesktopShortcut from './DesktopShortcut';
 import AppWindow from '../Window/AppWindow';
 import { useWindowStore } from '../../store/windowStore';
 
-import Computer from '../../assets/icons/computer.png';
-import Directory from '../../assets/icons/directory.png';
-import WebPage from '../../assets/icons/html.png';
-import Notepad from '../../assets/icons/notepad.png';
-import Trash from '../../assets/icons/recycle_bin.png';
-import Terminal from '../../assets/icons/terminal.png';
-import Browser from '../../assets/icons/internet.png';
-import Script from '../../assets/icons/script.png';
+import Computer from '../../assets/icons/Desktop/computer.png';
+import Directory from '../../assets/icons/Desktop/directory.png';
+import WebPage from '../../assets/icons/Desktop/html.png';
+import Notepad from '../../assets/icons/Desktop/notepad.png';
+import Trash from '../../assets/icons/Desktop/recycle_bin.png';
+import Terminal from '../../assets/icons/Desktop/terminal.png';
+import Browser from '../../assets/icons/Desktop/internet.png';
+import Script from '../../assets/icons/Desktop/script.png';
 
 import Taskbar from "../Taskbar/Taskbar";
 
 import SobreMim from '../apps/Notepad/SobreMim';
 import Educacao from '../apps/Notepad/Educacao';
+import Contato from '../apps/WebBrowser/Contato';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -104,7 +105,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={WebPage}
           label="Contatos.html"
-          onClick={() => alert('Abrindo Contatos...')}
+          onClick={() => openWindow({ id: 'contato', title: "Gustavo's Homepage — Internet Explorer", component: Contato })}
         />
         <DesktopShortcut
           icon={Browser}

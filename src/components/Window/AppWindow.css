@@ -28,6 +28,10 @@
 
 .app-window__titlebar span {
     padding-left: 0.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .app-window__buttons {

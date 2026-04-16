@@ -37,7 +37,7 @@ export default function AppWindow({ window }) {
               -
             </button>
             <button className="app-window__maximize" onClick={() => maximizeWindow(window.id)}>
-              ▢
+              □
             </button>
             <button className="app-window__close" onClick={() => closeWindow(window.id)}>
               ×
