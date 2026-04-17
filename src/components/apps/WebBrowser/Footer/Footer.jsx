@@ -9,11 +9,14 @@ export default function Footer() {
             <div className="html">
                 <img src={Html} alt="HTML" />
             </div>
-            <div className="square"></div>
-            <div className="square"></div>
+            <div className="square" />
+            <div className="square" />
             <div className="internet-corner">
-                <img src={InternetCorner} alt="World" />
-                <p>Internet</p>
+                <span className="internet-corner-text">
+                    <img src={InternetCorner} alt="World" />
+                    <p>Internet</p>
+                </span>
+                <div className='resize-handle' />
             </div>
         </div>
     )

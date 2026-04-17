@@ -6,7 +6,9 @@ export default function Contato() {
   return (
     <div className="frame">
       <Menu link="http://gustavo.oliveira.com/contact/"/>
-      <p>Web Browser</p>
+      <div className="contato-content">
+        Web Browser
+      </div>
       <Footer />
     </div>
   );

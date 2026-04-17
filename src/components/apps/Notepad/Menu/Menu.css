@@ -1,4 +1,4 @@
-.menu {
+.notepad-menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -9,7 +9,7 @@
     background: #c6c6c6;
 }
 
-.menu p {
+.notepad-menu p {
     margin: 0;
     cursor: pointer;
 }

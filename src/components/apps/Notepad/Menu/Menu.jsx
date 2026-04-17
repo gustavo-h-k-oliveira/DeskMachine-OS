@@ -2,7 +2,7 @@ import "./Menu.css";
 
 export default function Menu() {
     return (
-              <div className="menu">
+      <div className="notepad-menu">
         <p>File</p>
         <p>Edit</p>
         <p>Search</p>

@@ -12,7 +12,7 @@ import Page from '../../../../assets/icons/WebBrowser/html.png';
 
 export default function Menu(props) {
     return (
-        <div className="menu">
+        <div className="web-menu">
             <div className="menu-box">
                 <div className="menu-options">  
                     <div className="lateral-block"></div>

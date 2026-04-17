@@ -3,7 +3,7 @@ import Menu from "./Menu/Menu";
 
 export default function SobreMim() {
   return (
-    <div className="frame">
+    <div className="notepad-frame">
       <Menu />
       <div className="content">
         <h1>
