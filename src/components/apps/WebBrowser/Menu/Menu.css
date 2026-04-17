@@ -30,7 +30,7 @@
     display: inline-flex;
     padding: 0.1rem;
     align-items: center;
-    height: 1.3rem;
+    height: 1.4rem;
 }
 
 .menu-options button,
@@ -46,6 +46,13 @@
     font-size: 0.7rem;
     height: 1.5rem;
     cursor: pointer;
+}
+
+.divisor {
+    background: gray;
+    width: 1px;
+    border-right: 1px solid #fff;
+    height: 1rem;
 }
 
 .menu-options {
