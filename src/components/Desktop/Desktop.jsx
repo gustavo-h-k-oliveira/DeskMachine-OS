@@ -20,6 +20,7 @@ import Taskbar from "../Taskbar/Taskbar";
 import SobreMim from '../apps/Notepad/SobreMim';
 import Educacao from '../apps/Notepad/Educacao';
 import Contato from '../apps/WebBrowser/Contato';
+import Experiencia from '../apps/WebBrowser/Experiencia';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -120,7 +121,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={WebPage}
           label="Experiências.html"
-          onClick={() => alert('Abrindo Experiências...')}
+          onClick={() => openWindow({ id: 'experiencia', title: "My Experiences — Internet Explorer", component: Experiencia })}
         />
         <DesktopShortcut
           icon={Script}
