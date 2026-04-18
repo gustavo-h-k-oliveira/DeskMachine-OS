@@ -9,6 +9,7 @@
     outline: 2px solid #fff;
     color: black;
     position: fixed;
+    z-index: 1000;
     bottom: 0;
     gap: 0.2rem;
 }

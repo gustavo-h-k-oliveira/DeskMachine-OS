@@ -40,6 +40,7 @@
 
 .internet-corner {
     display: flex;
+    position: relative;
     align-items: center;
     width: 10rem;
     justify-content: space-between;
@@ -55,8 +56,8 @@
     position: absolute;
     width: 1rem;
     height: 1rem;
-    right: 0.2rem;
-    bottom: 0.3rem;
+    right: 0;
+    bottom: 0;
 
     background-image: linear-gradient(
         135deg,
