@@ -28,6 +28,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 body {
 	line-height: 1;
 }
@@ -48,16 +52,4 @@ table {
 }
 strong {
     font-weight: bold;
-}
-
-/* Custom styles for DeskMachine OS */
-.app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #282c34;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

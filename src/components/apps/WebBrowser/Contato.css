@@ -1,0 +1,10 @@
+.contato-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contato-content p {
+    line-height: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}

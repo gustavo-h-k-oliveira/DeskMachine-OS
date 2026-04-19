@@ -1,0 +1,23 @@
+.frame {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #d7d1c9;
+    box-sizing: border-box;
+}
+
+.experiencia-content,
+.contato-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 0.5rem;
+    background: #fff;
+    border: 2px solid #7c7b7b;
+    border-color: #7c7b7b #ebe8e4 #ebe8e4 #7c7b7b;
+    box-sizing: border-box;
+    overflow: auto;
+}

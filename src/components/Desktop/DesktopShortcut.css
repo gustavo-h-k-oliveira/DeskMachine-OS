@@ -1,0 +1,30 @@
+.desktop-shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 120px;
+  padding: 0.85rem 0.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.desktop-shortcut:active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.desktop-shortcut__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.desktop-shortcut__label {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: normal;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}

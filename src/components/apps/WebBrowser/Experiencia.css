@@ -1,0 +1,33 @@
+.experiencia-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia-content h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia-content h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia-content p {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.experiencia-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.experiencia-content li {
+    margin-bottom: 0.5rem;
+}

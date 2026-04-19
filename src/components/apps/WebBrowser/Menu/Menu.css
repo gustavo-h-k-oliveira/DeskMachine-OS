@@ -1,0 +1,114 @@
+.web-menu p {
+    font-size: 0.7rem;
+    padding-left: 0.2rem;
+}
+
+.web-menu {
+    display: flex;
+    background-color: #d7d1c9;
+    padding: 0.1rem 0 0.3rem 0;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #888;
+}
+
+.lateral-block {
+    background: #d7d1c9;
+    width: 2px;
+    border: 1px solid #888;
+    border-color: #fff #888 #888 #fff;
+    height: 1.2rem;
+}
+
+.menu-options,
+.menu-navigation,
+.menu-search {
+    display: inline-flex;
+    padding: 0.1rem;
+    align-items: center;
+    height: 1.4rem;
+}
+
+.menu-options button,
+.menu-navigation__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    background: none;
+    font-size: 0.7rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.divisor {
+    background: gray;
+    width: 1px;
+    border-right: 1px solid #fff;
+    height: 1rem;
+}
+
+.menu-options {
+    gap: 0.7rem;
+    border-bottom: 1px solid #888;
+}
+
+.menu-options button {
+    color: #777;
+}
+
+.menu-navigation {
+    gap: 0.5rem;
+    border-bottom: 1px solid #888;
+}
+
+.menu-search {
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    height: 1.2rem;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    border-color: #4a4a4a #d7d1c9 #d7d1c9 #4a4a4a;
+}
+
+.search-box__input {
+    display: flex;
+    padding-left: 0.1rem;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+}
+
+.search-box__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.1rem;
+    width: 1rem;
+    background: #d7d1c9;
+    border: 1px solid;
+    border-color: #fff #4a4a4a #4a4a4a #fff;
+    outline: #d7d1c9 solid 1px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 1rem;
+    height: 1rem;
+}

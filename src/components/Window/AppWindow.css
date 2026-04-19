@@ -1,0 +1,74 @@
+.app-window {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+.app-window__frame {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0.1rem;
+    border: 2px solid #d0d0d0;
+    border-color: #fff #000 #000 #fff;
+    background: #c6c6c6;
+}
+
+.app-window__titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 0.1rem;
+    background: #000080;
+    color: white;
+    font-weight: normal;
+    cursor: move;
+}
+
+.app-window__titlebar span {
+    padding-left: 0.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-window__buttons {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.app-window__buttons button {
+    display: inline-flex;
+    justify-content: center;
+    border: 2px solid #d0d0d0;
+    border-color: #fff #000 #000 #fff;
+    background: #c6c6c6;
+    color: black;
+    width: 1.2rem;
+    height: 1.2rem;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+}
+
+.app-window__minimize {
+    align-items: baseline;
+    font-size: 1rem;
+}
+
+.app-window__maximize {
+    font-size: 0.7rem;
+    align-items: center;
+}
+
+.app-window__close {
+    align-items: center;
+}
+
+.app-window__content {
+    flex: 1;
+    overflow: auto;
+    color: #111;
+    background: #fff;
+}
