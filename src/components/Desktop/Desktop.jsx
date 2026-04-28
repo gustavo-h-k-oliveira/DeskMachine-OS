@@ -21,6 +21,7 @@ import SobreMim from '../apps/Notepad/SobreMim';
 import Educacao from '../apps/Notepad/Educacao';
 import Contato from '../apps/WebBrowser/Contato';
 import Experiencia from '../apps/WebBrowser/Experiencia';
+import Homepage from '../apps/WebBrowser/Homepage';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -111,7 +112,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Browser}
           label="Internet Explorer"
-          onClick={() => alert('Abrindo Internet...')}
+          onClick={() => openWindow({ id: 'homepage', title: "Yuhoo!", component: Homepage })}
         />
         <DesktopShortcut
           icon={Notepad}
