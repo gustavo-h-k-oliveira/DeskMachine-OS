@@ -1,0 +1,15 @@
+.terminal-frame {
+  height: 100%;
+  min-height: 100%;
+  border-top: 3px solid #c6c6c6;
+  font-size: small;
+}
+
+.terminal-app > div {
+  background-color: #151515;
+}
+
+.terminal-app .index_editor__JoDSg {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}

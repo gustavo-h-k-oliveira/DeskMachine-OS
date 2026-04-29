@@ -22,6 +22,7 @@ import Educacao from '../apps/Notepad/Educacao';
 import Contato from '../apps/WebBrowser/Contato';
 import Experiencia from '../apps/WebBrowser/Experiencia';
 import Homepage from '../apps/WebBrowser/Homepage';
+import TerminalConsole from '../apps/Terminal/Terminal';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -132,7 +133,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Terminal}
           label="Terminal"
-          onClick={() => alert('Abrindo Terminal...')}
+          onClick={() => openWindow({ id: 'terminal', title: 'Terminal', component: TerminalConsole })}
         />
         <DesktopShortcut
           icon={Trash}
