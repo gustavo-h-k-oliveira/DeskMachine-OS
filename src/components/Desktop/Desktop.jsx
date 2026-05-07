@@ -23,6 +23,7 @@ import Contato from '../apps/WebBrowser/Contato';
 import Experiencia from '../apps/WebBrowser/Experiencia';
 import Homepage from '../apps/WebBrowser/Homepage';
 import TerminalConsole from '../apps/Terminal/Terminal';
+import Habilidade from '../apps/Terminal/Habilidade';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -128,7 +129,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Script}
           label="Habilidades.bat"
-          onClick={() => alert('Abrindo Habilidades...')}
+          onClick={() => openWindow({ id: 'habilidade', title: 'Habilidades.bat — Terminal', component: Habilidade })}
         />
         <DesktopShortcut
           icon={Terminal}

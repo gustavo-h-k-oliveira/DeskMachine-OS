@@ -1,8 +1,8 @@
 import { ReactTerminal, TerminalContextProvider } from 'react-terminal';
 import './Terminal.css';
 
-const commands = {
-  help: `Comandos disponíveis:\n- help\n- echo [texto]\n- date\n- about\n- clear`,
+export const commands = {
+  help: `Comandos disponíveis:\n- help\n- echo [texto]\n- date\n- about\n- whoami\n- ls\n- cd [diretório]\n- mkdir [diretório]\n- rmdir [diretório]\n- cat [arquivo]\n- nano [arquivo]\n- pwd\n- history\n- ping [host]\n- fortune\n- clear`,
   echo: (...args) => args.join(' '),
   date: () => new Date().toString(),
   about: 'Terminal mock do DeskMachine-OS. Digite "help" para ver os comandos disponíveis.',

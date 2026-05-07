@@ -56,7 +56,7 @@ export default function Experiencia() {
                 </ul>
                 <h2>UNESP TUPÃ | Iniciação Científica em Desenvolvimento de Software</h2>
                 <p>
-                    Participação no desenvolvimento de um sistema eletrônico de monitoramento de plantas de soja em ambiente aberto, com foco em coleta de dados, baixo custo e escalabilidade. O projeto foi apresentado no VI Congresso Brasileiro de Iniciação Científica em Engenharia e Tecnologia, auxiliando na divulgação científica e obtendo reconhecimento acadêmico. <a href="https://docs.google.com/document/d/e/2PACX-1vQwObTMLteQyyESt04PqXYdueP7bvmGXQLOJUa___jiC2FIRIVDAq4VJZvXghae-w/pub" target="_blank" rel="noopener noreferrer">Visualizar PDF</a>.
+                    Participação no desenvolvimento de um sistema eletrônico de monitoramento de plantas de soja em ambiente aberto, com foco em coleta de dados, baixo custo e escalabilidade. O projeto foi apresentado no VI Congresso Brasileiro de Iniciação Científica em Engenharia e Tecnologia, auxiliando na divulgação científica e obtendo reconhecimento acadêmico. <a href="https://docs.google.com/document/d/e/2PACX-1vQwObTMLteQyyESt04PqXYdueP7bvmGXQLOJUa___jiC2FIRIVDAq4VJZvXghae-w/pub" target="_blank" rel="noopener noreferrer">Visualizar resumo</a>.
                 </p>
                 <strong>Atividades realizadas</strong>
                 <ul>
