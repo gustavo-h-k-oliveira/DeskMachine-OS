@@ -8,7 +8,8 @@
 }
 
 .experiencia-content,
-.contato-content {
+.contato-content,
+.homepage-content {
     flex: 1 1 auto;
     min-height: 0;
     display: flex;

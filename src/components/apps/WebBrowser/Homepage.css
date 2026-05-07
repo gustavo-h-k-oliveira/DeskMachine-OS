@@ -1,0 +1,103 @@
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdfcfc;
+    height: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    container-type: inline-size;
+}
+
+.homepage-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.homepage-shortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.homepage-logo {
+    width: 25rem;
+}
+
+.homepage-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.homepage-search input {
+    padding: 0.5rem;
+    border: 1px solid;
+    background-color: #fff;
+    border-color: #000 #ccc #ccc #000;
+    width: 20rem;
+}
+
+.homepage-search button {
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-color: #fff #000 #000 #fff;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.homepage-search a {
+    font-size: 1rem;
+}
+
+.homepage-favorites {
+    display: flex;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.homepage-content ul {
+    list-style: outside;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+    margin: 2rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    border-bottom: 2px solid #444;
+}
+
+.homepage-content li {
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+@container (max-width: 670px) {
+    .homepage-main {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .homepage-shortcuts {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .homepage-logo {
+        width: 17rem;
+    }
+
+    .homepage-search {
+        margin-top: 2rem;
+    }
+
+    .homepage-content ul {
+        font-size: 1rem;
+    }   
+}
