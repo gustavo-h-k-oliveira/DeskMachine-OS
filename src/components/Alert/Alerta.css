@@ -1,0 +1,50 @@
+.alert-panel {
+    height: 100%;
+    padding: 14px 18px;
+    color: #111827;
+    text-align: center;
+    background-color: #c6c6c6;
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+}
+
+.alert-content img {
+    width: 48px;
+    height: 48px;
+}
+
+.alert-message {
+    margin-left: 1rem;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.alert-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.alert-ok-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    border: 2px solid #d0d0d0;
+    border-color: #fff #000 #000 #fff;
+    background: #c6c6c6;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.alert-ok-button:hover {
+    background: #e5e5e5;
+}

@@ -45,7 +45,7 @@ export default function AppWindow({ window }) {
           </div>
         </div>
         <div className="app-window__content">
-          {AppContent ? <AppContent /> : <div>Conteúdo não definido.</div>}
+          {AppContent ? <AppContent onClose={() => closeWindow(window.id)} /> : <div>Conteúdo não definido.</div>}
         </div>
       </div>
     </Rnd>

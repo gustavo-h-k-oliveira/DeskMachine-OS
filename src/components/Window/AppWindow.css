@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.1rem 0.1rem;
+    padding: 0.2rem;
     background: #000080;
     color: white;
     font-weight: normal;
@@ -27,7 +27,7 @@
 }
 
 .app-window__titlebar span {
-    padding-left: 0.3rem;
+    padding: 0.2rem 0.3rem;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
