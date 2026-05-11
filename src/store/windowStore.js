@@ -54,7 +54,7 @@ export const useWindowStore = create((set) => ({
         };
 
         const width = 360;
-        const height = 190;
+        const height = 200;
         const x = Math.round(screen.x + (screen.width - width) / 2);
         const y = Math.round(screen.y + (screen.height - height) / 2);
 
