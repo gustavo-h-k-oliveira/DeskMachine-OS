@@ -1,9 +1,11 @@
 .contato-content {
     font-family: 'Times New Roman', Times, serif;
+    background-image: url('../../../assets/backgrounds/website/bg-website.jpg');
 }
 
 .contato-content h1 {
     font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
