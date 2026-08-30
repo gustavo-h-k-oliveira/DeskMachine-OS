@@ -10,12 +10,12 @@ export default function SobreMim() {
           Sobre Mim
         </h1>
         <p>
-            Sou apaixonado por tecnologia e em transformar 
-            dados em soluções reais. Gosto de aprender 
-            novas ferramentas e linguagens, mas acima de 
-            tudo, gosto de aplicá-las ao mundo real com boas 
-            práticas de engenharia de software para criar 
-            soluções com propósitos.
+          Sou apaixonado por tecnologia e por transformar
+          dados em soluções reais. Gosto de aprender
+          novas ferramentas e linguagens, mas acima de
+          tudo, gosto de aplicá-las ao mundo real com boas
+          práticas de engenharia de software para criar
+          soluções com propósitos.
         </p>
       </div>
     </div>

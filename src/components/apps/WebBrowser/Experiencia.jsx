@@ -6,9 +6,9 @@ import Footer from "./Footer/Footer";
 export default function Experiencia() {
     return (
         <div className="frame">
-            <Menu link="http://gustavo.oliveira.com/experience/"/>
+            <Menu link="http://gustavo.oliveira.com/experience/" />
             <div className="experiencia-content">
-                <h1>Minhas Experiência</h1>
+                <h1>Minhas Experiências</h1>
                 <h2>ZD ALIMENTOS | Análise de Dados e Previsão</h2>
                 <h3>Programa InovaSkill</h3>
                 <p>
@@ -76,7 +76,7 @@ export default function Experiencia() {
                 <h2>ATIVIDADES COMPLEMENTARES</h2>
                 <h3>Oficina de Cerâmica Chieko Nishimura | Voluntariado</h3>
                 <p>
-                    Atuo como voluntário na oficina de cerâmica da Fundação Shunji Nishimura de Tecnologia, auxiliando na organização das atividades e no apoio aos participantes. Também elaboro e modelo peças e esculturas que exigem colaboração, paciência e atenção a detalhes.
+                    Atuo como voluntário na oficina de cerâmica da Fundação Shunji Nishimura de Tecnologia, auxiliando na organização das atividades e no apoio aos participantes. Também elaboro e modelo peças e esculturas que exigem colaboração, paciência e atenção aos detalhes.
                 </p>
             </div>
             <Footer />

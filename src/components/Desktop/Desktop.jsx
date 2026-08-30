@@ -25,6 +25,9 @@ import Experiencia from '../apps/WebBrowser/Experiencia';
 import Homepage from '../apps/WebBrowser/Homepage';
 import TerminalConsole from '../apps/Terminal/Terminal';
 import Habilidade from '../apps/Terminal/Habilidade';
+import MyComputer from '../apps/FileExplorer/MyComputer';
+import Documents from '../apps/FileExplorer/Documents';
+import TrashBin from '../apps/FileExplorer/TrashBin';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -115,12 +118,12 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Computer}
           label="Meu Computador"
-          onClick={() => alert('Abrindo Meu Computador...')}
+          onClick={() => openWindow({ id: 'my-computer', title: 'Meu Computador', component: MyComputer })}
         />
         <DesktopShortcut
           icon={Directory}
           label="Documentos"
-          onClick={() => alert('Abrindo Documentos...')}
+          onClick={() => openWindow({ id: 'documents', title: 'Documentos', component: Documents })}
         />
         <DesktopShortcut
           icon={Notepad}
@@ -160,7 +163,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Trash}
           label="Lixeira"
-          onClick={() => alert('Abrindo Lixeira...')}
+          onClick={() => openWindow({ id: 'trash-bin', title: 'Lixeira', component: TrashBin })}
         />
       </div>
 
