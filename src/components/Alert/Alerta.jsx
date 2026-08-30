@@ -7,7 +7,7 @@ export default function Alerta({ onClose }) {
       <div className="alert-content">
         <img src={X} />
         <p className="alert-message">
-          Para melhor experiência, recomendamos que você acesse o DeskMachine OS em um computador.
+          Para uma melhor experiência, recomendamos que você acesse o DeskMachine OS em um computador.
         </p>
       </div>
       <div className="alert-actions">
