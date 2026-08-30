@@ -37,6 +37,7 @@ export default function BootScreen({ onComplete }) {
                     <p key={index}>{line}</p>
                 ))}
             </div>
+            <p className="boot-screen__tip">Toque na tela para ativar o som.</p>
         </div>
     );
 }

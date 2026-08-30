@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import "./Desktop.css";
 
 import startupSound from '/src/assets/sounds/startup-sound.mp3';
@@ -16,6 +16,7 @@ import Browser from '../../assets/icons/Desktop/internet.png';
 import Script from '../../assets/icons/Desktop/script.png';
 
 import Taskbar from "../Taskbar/Taskbar";
+import Alerta from '../Alert/Alerta';
 
 import SobreMim from '../apps/Notepad/SobreMim';
 import Educacao from '../apps/Notepad/Educacao';
@@ -24,6 +25,9 @@ import Experiencia from '../apps/WebBrowser/Experiencia';
 import Homepage from '../apps/WebBrowser/Homepage';
 import TerminalConsole from '../apps/Terminal/Terminal';
 import Habilidade from '../apps/Terminal/Habilidade';
+import MyComputer from '../apps/FileExplorer/MyComputer';
+import Documents from '../apps/FileExplorer/Documents';
+import TrashBin from '../apps/FileExplorer/TrashBin';
 
 const backgrounds = Object.values(
   import.meta.glob('../../assets/backgrounds/*.{jpg,png}', {
@@ -40,8 +44,28 @@ backgrounds.forEach((src) => {
 
 export default function Desktop() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const alertOpenedRef = useRef(false);
+  const openAlertWindow = useWindowStore((state) => state.openAlertWindow);
   const openWindow = useWindowStore((state) => state.openWindow);
   const windows = useWindowStore((state) => state.windows);
+
+  useEffect(() => {
+    if (alertOpenedRef.current) {
+      return;
+    }
+
+    if (typeof window === 'undefined' || window.innerWidth >= 500) {
+      return;
+    }
+
+    alertOpenedRef.current = true;
+
+    openAlertWindow({
+      id: 'desktop-alert',
+      title: 'Mensagem do Sistema',
+      component: Alerta,
+    });
+  }, [openAlertWindow]);
 
   useEffect(() => {
     if (backgrounds.length === 0) {
@@ -94,12 +118,12 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Computer}
           label="Meu Computador"
-          onClick={() => alert('Abrindo Meu Computador...')}
+          onClick={() => openWindow({ id: 'my-computer', title: 'Meu Computador', component: MyComputer })}
         />
         <DesktopShortcut
           icon={Directory}
           label="Documentos"
-          onClick={() => alert('Abrindo Documentos...')}
+          onClick={() => openWindow({ id: 'documents', title: 'Documentos', component: Documents })}
         />
         <DesktopShortcut
           icon={Notepad}
@@ -139,7 +163,7 @@ export default function Desktop() {
         <DesktopShortcut
           icon={Trash}
           label="Lixeira"
-          onClick={() => alert('Abrindo Lixeira...')}
+          onClick={() => openWindow({ id: 'trash-bin', title: 'Lixeira', component: TrashBin })}
         />
       </div>
 

@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.1rem 0.1rem;
+    padding: 0.2rem;
     background: #000080;
     color: white;
     font-weight: normal;
@@ -27,7 +27,7 @@
 }
 
 .app-window__titlebar span {
-    padding-left: 0.3rem;
+    padding: 0.2rem 0.3rem;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -72,3 +72,35 @@
     color: #111;
     background: #fff;
 }
+
+@media (max-width: 500px) {
+    .app-window__titlebar {
+        cursor: default;
+        padding: 0.35rem 0.4rem;
+    }
+
+    .app-window__buttons {
+        gap: 0.25rem;
+    }
+
+    .app-window__buttons button {
+        width: 1.6rem;
+        height: 1.6rem;
+        min-width: 1.6rem;
+        min-height: 1.6rem;
+        touch-action: manipulation;
+    }
+
+    .app-window__minimize {
+        font-size: 1.2rem;
+    }
+
+    .app-window__maximize {
+        font-size: 0.85rem;
+    }
+
+    .app-window__close {
+        font-size: 1.1rem;
+    }
+}
+

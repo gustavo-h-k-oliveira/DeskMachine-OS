@@ -45,6 +45,38 @@ export const useWindowStore = create((set) => ({
         }));
     },
 
+    openAlertWindow: (app) => {
+        const screen = getSmallScreenSize() ?? {
+            x: 0,
+            y: 0,
+            width: window.innerWidth,
+            height: window.innerHeight - getTaskbarHeight(),
+        };
+
+        const width = 360;
+        const height = 200;
+        const x = Math.round(screen.x + (screen.width - width) / 2);
+        const y = Math.round(screen.y + (screen.height - height) / 2);
+
+        return set((state) => ({
+            windows: [
+                ...state.windows,
+                {
+                    ...app,
+                    id: `${app.id}-${state.nextWindowId}`,
+                    width,
+                    height,
+                    x,
+                    y,
+                    zIndex: state.nextZIndex,
+                    minimized: false,
+                },
+            ],
+            nextWindowId: state.nextWindowId + 1,
+            nextZIndex: state.nextZIndex + 1,
+        }));
+    },
+
     closeWindow: (id) => set((state) => ({
         windows: state.windows.filter((w) =>
             w.id !== id

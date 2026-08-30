@@ -1,3 +1,8 @@
+.experiencia-content {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('../../../assets/backgrounds/website/bg-website.jpg');
+}
+
 .experiencia-content h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
